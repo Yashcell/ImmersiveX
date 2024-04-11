@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      img {
+         width: 200px;
+         height: auto;
+      }
+   </style>
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <img src="immersive-x-high-resolution-logo-black-transparent.png" alt="Knowledge Bank">
+      <div style="position: relative; width: 600px; font-weight: bold;height: 150px; background-color: #ffffff; color: #000000; text-align: center; line-height: 150px; font-size: 50px;">
+         IMMERSIVE X BY YASH
+     </div>
+     
+    
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar" id="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+   <div class="sidebar-text" style="font-size: 30px; font-family: Arial, sans-serif; font-weight: bold; color: #333; padding-top: 20px;">
+      <p>Website is Under Devlopment.
+         close sidbar from 3 line icon at top right corner </p>
+   </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<section class="home-grid">
+
+   <h1 class="heading">Business Documents & Research Links</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <h3 class="title">Business Plan</h3>
+         <a href="Businessplan.html" class="inline-btn">View & Download </a>
+      </div>
+      <div class="box">
+         <h3 class="title">Marketing Strategy</h3>
+         <a href="marketingstartegy.html" class="inline-btn">View & Download </a>
+      </div>
+      <div class="box">
+         <h3 class="title">SWOT Analysis</h3>
+         <a href="swotanalysis.html" class="inline-btn">View & Download </a>
+      </div>
+      <div class="box">
+         <h3 class="title">Case Study 1</h3>
+         <a href="CaseSTudy.html" class="inline-btn">View & Download </a>
+      </div>
+      <div class="box">
+         <h3 class="title">Case Study 2</h3>
+         <a href="ossovrcasestudy.html" class="inline-btn">View & Download </a>
+      </div>
+      <div class="box">
+         <h3 class="title">CRM Management</h3>
+         <a href="surveyandquestionare.html" class="inline-btn">View & Download </a>
+      </div>
+
+    
+      <div class="box" style="width: 565px !important;">
+         <h3 class="title">Contact Us</h3>
+         <p class="tutor">For any questions or inquiries about our products, services, or website demos, please don't hesitate to reach out to us. Our team is dedicated to providing you with the assistance you need.</p>
+     
+         <p class="tutor">If you're interested in learning more about our products or requesting a website demo, simply click on the "Contact Us" button below.</p>
+             
+         <p class="tutor">For business inquiries, please contact us via email at <a href="mailto:knowledgebank.dseu@gmail.com"><i class="fab fa-html"></i><span>Mail</span></a>.</p>
+             
+         <a href="tel:9336299321" class="inline-btn">Contact us</a>
+     </div>
+     
+     
+   </div>
+
+</section>
+
+
+
+
+
+</section>
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>IMMERSIVE X</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
+</body>
+<script>
+   const sideBar = document.getElementById('side-bar');
+   const closeBtn = document.getElementById('close-btn');
+
+   // Ensure sidebar is initially closed
+   sideBar.style.left = '-300px';
+
+   closeBtn.addEventListener('click', () => {
+      sideBar.style.left = '-300px'; /* Adjust this value to the width of your sidebar */
+   });
+</script>
+
+
+</html>

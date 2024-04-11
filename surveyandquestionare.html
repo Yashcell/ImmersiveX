@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM Survey and Feedback Questionnaire</title>
+  <style>
+    /* CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #007bff;
+      font-size: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="radio"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CRM Survey and Feedback Questionnaire</h1>
+  <form id="surveyForm" onsubmit="submitForm(event)">
+    <fieldset>
+      <legend>Personal Information:</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="Name" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="Email" required><br><br>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="Phone Number" required><br><br>
+      <label for="company">Company Name:</label>
+      <input type="text" id="company" name="Company Name"><br><br>
+      <label for="position">Position/Role:</label>
+      <input type="text" id="position" name="Position/Role"><br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Demographics:</legend>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+  
+        <label for="age">Age Group:</label><br>
+        <input type="radio" id="under-18" name="age" value="Under 18">
+        <label for="under-18">Under 18</label><br>
+        <input type="radio" id="18-24" name="age" value="18 - 24">
+        <label for="18-24">18 - 24</label><br>
+        <input type="radio" id="25-34" name="age" value="25 - 34">
+        <label for="25-34">25 - 34</label><br>
+        <input type="radio" id="35-44" name="age" value="35 - 44">
+        <label for="35-44">35 - 44</label><br>
+        <input type="radio" id="45-54" name="age" value="45 - 54">
+        <label for="45-54">45 - 54</label><br>
+        <input type="radio" id="55-64" name="age" value="55 - 64">
+        <label for="55-64">55 - 64</label><br>
+        <input type="radio" id="65-above" name="age" value="65 or Above">
+        <label for="65-above">65 or Above</label><br><br>
+  
+        <label for="location">Location:</label><br>
+        <input type="checkbox" id="urban" name="location" value="Urban">
+        <label for="urban">Urban</label><br>
+        <input type="checkbox" id="suburban" name="location" value="Suburban">
+        <label for="suburban">Suburban</label><br>
+        <input type="checkbox" id="rural" name="location" value="Rural">
+        <label for="rural">Rural</label><br><br>
+      </fieldset>
+    <fieldset>
+      <legend>Brand Perception:</legend>
+      <label for="hear-about">How did you first hear about our company?</label>
+      <select id="hear-about" name="How did you first hear about our company?" required>
+        <option value="">Select Option</option>
+        <option value="Social Media">Social Media</option>
+        <option value="Search Engine">Search Engine</option>
+        <option value="Referral">Referral</option>
+        <option value="Other">Other</option>
+      </select><br><br>
+
+      <label for="motivation">What motivated you to engage with our brand?</label><br>
+      <input type="checkbox" id="reputation" name="motivation" value="Reputation">
+      <label for="reputation">Reputation</label><br>
+      <input type="checkbox" id="quality" name="motivation" value="Product/Service Quality">
+      <label for="quality">Product/Service Quality</label><br>
+      <input type="checkbox" id="pricing" name="motivation" value="Pricing">
+      <label for="pricing">Pricing</label><br>
+      <input type="checkbox" id="service" name="motivation" value="Customer Service">
+      <label for="service">Customer Service</label><br>
+      <input type="checkbox" id="other-motivation" name="motivation" value="Other">
+      <label for="other-motivation">Other</label><br><br>
+
+      <label for="overall-perception">On a scale of 1 to 5, how would you rate your overall perception of our brand?</label><br>
+      <input type="radio" id="1" name="overall-perception" value="1">
+      <label for="1">1 (Poor)</label>
+      <input type="radio" id="2" name="overall-perception" value="2">
+      <label for="2">2 (Fair)</label>
+      <input type="radio" id="3" name="overall-perception" value="3">
+      <label for="3">3 (Average)</label>
+      <input type="radio" id="4" name="overall-perception" value="4">
+      <label for="4">4 (Good)</label>
+      <input type="radio" id="5" name="overall-perception" value="5">
+      <label for="5">5 (Excellent)</label><br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Customer Experience:</legend>
+        <label for="customer-service">How satisfied are you with the responsiveness and effectiveness of our customer service?</label><br>
+        <input type="radio" id="very-dissatisfied" name="customer-service" value="Very Dissatisfied">
+        <label for="very-dissatisfied">Very Dissatisfied</label>
+        <input type="radio" id="dissatisfied" name="customer-service" value="Dissatisfied">
+        <label for="dissatisfied">Dissatisfied</label>
+        <input type="radio" id="neutral" name="customer-service" value="Neutral">
+        <label for="neutral">Neutral</label>
+        <input type="radio" id="satisfied" name="customer-service" value="Satisfied">
+        <label for="satisfied">Satisfied</label>
+        <input type="radio" id="very-satisfied" name="customer-service" value="Very Satisfied">
+        <label for="very-satisfied">Very Satisfied</label><br><br>
+  
+        <label for="issues">Have you encountered any issues or challenges while interacting with our company?</label><br>
+        <input type="radio" id="yes" name="issues" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="issues" value="No">
+        <label for="no">No</label>
+        <input type="radio" id="na" name="issues" value="Not Applicable">
+        <label for="na">Not Applicable</label><br><br>
+  
+        <label for="recommend">How likely are you to recommend our products/services to others?</label><br>
+        <input type="radio" id="not-likely" name="recommend" value="Not Likely">
+        <label for="not-likely">Not Likely</label>
+        <input type="radio" id="somewhat-likely" name="recommend" value="Somewhat Likely">
+        <label for="somewhat-likely">Somewhat Likely</label>
+        <input type="radio" id="neutral-rec" name="recommend" value="Neutral">
+        <label for="neutral-rec">Neutral</label>
+        <input type="radio" id="likely" name="recommend" value="Likely">
+        <label for="likely">Likely</label>
+        <input type="radio" id="very-likely" name="recommend" value="Very Likely">
+        <label for="very-likely">Very Likely</label><br><br>
+      </fieldset>
+  
+      <fieldset>
+        <legend>Client Generation:</legend>
+        <label for="factors">Which factors influenced your decision to become a client/customer of our company?</label><br>
+        <input type="checkbox" id="reviews" name="factors" value="Positive Reviews/Testimonials">
+        <label for="reviews">Positive Reviews/Testimonials</label><br>
+        <input type="checkbox" id="offers" name="factors" value="Promotional Offers/Discounts">
+        <label for="offers">Promotional Offers/Discounts</label><br>
+        <input type="checkbox" id="communication" name="factors" value="Personalized Communication">
+        <label for="communication">Personalized Communication</label><br>
+        <input type="checkbox" id="features" name="factors" value="Product/Service Features">
+        <label for="features">Product/Service Features</label><br>
+        <input type="checkbox" id="other-factors" name="factors" value="Other">
+        <label for="other-factors">Other</label><br><br>
+  
+        <label for="lead-strategies">How would you rate the effectiveness of our lead generation strategies in attracting potential clients?</label><br>
+        <input type="radio" id="ineffective" name="lead-strategies" value="Ineffective">
+        <label for="ineffective">Ineffective</label>
+        <input type="radio" id="somewhat-effective" name="lead-strategies" value="Somewhat Effective">
+        <label for="somewhat-effective">Somewhat Effective</label>
+        <input type="radio" id="neutral-strategies" name="lead-strategies" value="Neutral">
+        <label for="neutral-strategies">Neutral</label>
+        <input type="radio" id="effective" name="lead-strategies" value="Effective">
+        <label for="effective">Effective</label>
+        <input type="radio" id="very-effective" name="lead-strategies" value="Very Effective">
+        <label for="very-effective">Very Effective</label><br><br>
+  
+        <label for="improvements">What improvements would you suggest to enhance our client generation efforts?</label><br><br>
+      </fieldset>
+  
+      <fieldset>
+        <legend>Additional Feedback:</legend>
+        <label for="additional-feedback">Is there anything else you would like to share about your experience with our company or any suggestions for improvement?</label><br>
+        <textarea id="additional-feedback" name="additional-feedback" rows="4" cols="50"></textarea><br><br>
+      </fieldset>
+  
+      
+    <!-- Additional fieldsets for Customer Experience, Client Generation, Additional Feedback, and Demographics -->
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <footer>Designed by Yash Rathore</footer>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+
+      const formData = new FormData(document.getElementById('surveyForm'));
+      const formObject = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+
+      const jsonData = JSON.stringify(formObject);
+
+      google.script.run.submitForm(jsonData);
+    }
+  </script>
+</body>
+</html>
